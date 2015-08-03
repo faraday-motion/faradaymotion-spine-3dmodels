@@ -1,0 +1,27 @@
+Faraday Hall Sensor Board v1.0
+https://123d.circuits.io/circuits/616700-faraday-hall-sensor-board-v1-0
+
+
+
+Faraday Yun Controller v1.1
+
+https://123d.circuits.io/circuits/480481-faraday-yun-controller-v1-1
+
+
+
+Faraday Boardunit v1.1
+
+
+https://123d.circuits.io/circuits/491700-faraday-boardunit-v1-1
+
+
+
+Faraday Teensy 
+
+https://123d.circuits.io/circuits/484188-faraday-teensy#pcb
+
+
+
+Faraday Current Sensor v1.0
+
+https://123d.circuits.io/circuits/598550-faraday-current-sensor-v1-0
