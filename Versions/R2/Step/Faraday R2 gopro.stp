@@ -11,7 +11,7 @@ FILE_DESCRIPTION(
 FILE_NAME(
 /* name */ 
 'D:/Dropbox/Faradaymotion/Design/R2/R/Step/Faraday R2 gopro.stp',
-/* time_stamp */ '2015-08-30T23:26:28+02:00',
+/* time_stamp */ '2015-09-26T13:48:39+02:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v15.2',
@@ -46979,7 +46979,7 @@ SI_UNIT($,.RADIAN.)
 #44181=PRODUCT_DEFINITION_SHAPE('',$,#44184);
 #44182=SHAPE_REPRESENTATION('',(#22734),#44176);
 #44183=PRODUCT_DEFINITION_CONTEXT('3D Mechanical Parts',#44187,'design');
-#44184=PRODUCT_DEFINITION('Faraday E2 gopro','Faraday E2 gopro',#44185,
+#44184=PRODUCT_DEFINITION('Faraday R2 gopro','Faraday R2 gopro',#44185,
 #44183);
 #44185=PRODUCT_DEFINITION_FORMATION('',$,#44189);
 #44186=APPLICATION_PROTOCOL_DEFINITION('international standard',
@@ -46987,7 +46987,7 @@ SI_UNIT($,.RADIAN.)
 #44187=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #44188=PRODUCT_CONTEXT('3D Mechanical Parts',#44187,'mechanical');
-#44189=PRODUCT('Faraday E2 gopro','Faraday E2 gopro',$,(#44188));
+#44189=PRODUCT('Faraday R2 gopro','Faraday R2 gopro',$,(#44188));
 #44190=PRESENTATION_STYLE_ASSIGNMENT((#44191));
 #44191=SURFACE_STYLE_USAGE(.BOTH.,#44192);
 #44192=SURFACE_SIDE_STYLE($,(#44193));

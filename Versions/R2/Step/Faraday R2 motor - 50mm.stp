@@ -10,9 +10,9 @@ FILE_DESCRIPTION(
 
 FILE_NAME(
 /* name */ 
-'D:/Dropbox/Faradaymotion/Design/R2/R/Step/Faraday E2 motor - 50mm.stp',
+'D:/Dropbox/Faradaymotion/Design/R2/R/Step/Faraday R2 motor - 50mm.stp',
 
-/* time_stamp */ '2015-08-30T23:28:25+02:00',
+/* time_stamp */ '2015-09-26T13:46:38+02:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v15.2',
@@ -19542,15 +19542,15 @@ SI_UNIT($,.RADIAN.)
 #19004=PRODUCT_DEFINITION_SHAPE('',$,#19007);
 #19005=SHAPE_REPRESENTATION('',(#10770),#18999);
 #19006=PRODUCT_DEFINITION_CONTEXT('3D Mechanical Parts',#19010,'design');
-#19007=PRODUCT_DEFINITION('Faraday E2 motor - 50mm',
-'Faraday E2 motor - 50mm',#19008,#19006);
+#19007=PRODUCT_DEFINITION('Faraday R2 motor - 50mm',
+'Faraday R2 motor - 50mm',#19008,#19006);
 #19008=PRODUCT_DEFINITION_FORMATION('',$,#19012);
 #19009=APPLICATION_PROTOCOL_DEFINITION('international standard',
 'automotive_design',2009,#19010);
 #19010=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #19011=PRODUCT_CONTEXT('3D Mechanical Parts',#19010,'mechanical');
-#19012=PRODUCT('Faraday E2 motor - 50mm','Faraday E2 motor - 50mm',$,(#19011));
+#19012=PRODUCT('Faraday R2 motor - 50mm','Faraday R2 motor - 50mm',$,(#19011));
 #19013=PRESENTATION_STYLE_ASSIGNMENT((#19014));
 #19014=SURFACE_STYLE_USAGE(.BOTH.,#19015);
 #19015=SURFACE_SIDE_STYLE($,(#19016));

@@ -11,7 +11,7 @@ FILE_DESCRIPTION(
 FILE_NAME(
 /* name */ 
 'D:/Dropbox/Faradaymotion/Design/R2/R/Step/Faraday R2 wings.stp',
-/* time_stamp */ '2015-08-30T23:30:04+02:00',
+/* time_stamp */ '2015-09-26T13:44:49+02:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v15.2',
@@ -45433,7 +45433,7 @@ SI_UNIT($,.RADIAN.)
 #38670=PRODUCT_DEFINITION_SHAPE('',$,#38673);
 #38671=SHAPE_REPRESENTATION('',(#10993),#38665);
 #38672=PRODUCT_DEFINITION_CONTEXT('3D Mechanical Parts',#38676,'design');
-#38673=PRODUCT_DEFINITION('Faraday E2 wings','Faraday E2 wings',#38674,
+#38673=PRODUCT_DEFINITION('Faraday R2 wings','Faraday R2 wings',#38674,
 #38672);
 #38674=PRODUCT_DEFINITION_FORMATION('',$,#38678);
 #38675=APPLICATION_PROTOCOL_DEFINITION('international standard',
@@ -45441,7 +45441,7 @@ SI_UNIT($,.RADIAN.)
 #38676=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #38677=PRODUCT_CONTEXT('3D Mechanical Parts',#38676,'mechanical');
-#38678=PRODUCT('Faraday E2 wings','Faraday E2 wings',$,(#38677));
+#38678=PRODUCT('Faraday R2 wings','Faraday R2 wings',$,(#38677));
 #38679=PRESENTATION_STYLE_ASSIGNMENT((#38680));
 #38680=SURFACE_STYLE_USAGE(.BOTH.,#38681);
 #38681=SURFACE_SIDE_STYLE($,(#38682));

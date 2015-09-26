@@ -9,9 +9,9 @@ FILE_DESCRIPTION(
 /* implementation_level */ '2;1');
 
 FILE_NAME(
-/* name */ 
-'D:/Dropbox/Faradaymotion/Design/R2/R/Step/Faraday R2 gears.stp',
-/* time_stamp */ '2015-08-30T23:25:21+02:00',
+/* name */ 'D:/Dropbox/Faradaymotion/Design/R2/R/Faraday R2 gears.stp',
+
+/* time_stamp */ '2015-09-26T13:50:09+02:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v15.2',
@@ -33641,7 +33641,7 @@ SI_UNIT($,.RADIAN.)
 #31582=PRODUCT_DEFINITION_SHAPE('',$,#31585);
 #31583=SHAPE_REPRESENTATION('',(#18258),#31577);
 #31584=PRODUCT_DEFINITION_CONTEXT('3D Mechanical Parts',#31588,'design');
-#31585=PRODUCT_DEFINITION('Faraday E2 gears','Faraday E2 gears',#31586,
+#31585=PRODUCT_DEFINITION('Faraday R2 gears','Faraday R2 gears',#31586,
 #31584);
 #31586=PRODUCT_DEFINITION_FORMATION('',$,#31590);
 #31587=APPLICATION_PROTOCOL_DEFINITION('international standard',
@@ -33649,7 +33649,7 @@ SI_UNIT($,.RADIAN.)
 #31588=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #31589=PRODUCT_CONTEXT('3D Mechanical Parts',#31588,'mechanical');
-#31590=PRODUCT('Faraday E2 gears','Faraday E2 gears',$,(#31589));
+#31590=PRODUCT('Faraday R2 gears','Faraday R2 gears',$,(#31589));
 #31591=PRESENTATION_STYLE_ASSIGNMENT((#31592));
 #31592=SURFACE_STYLE_USAGE(.BOTH.,#31593);
 #31593=SURFACE_SIDE_STYLE($,(#31594));

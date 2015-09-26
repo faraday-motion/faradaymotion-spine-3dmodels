@@ -11,7 +11,7 @@ FILE_DESCRIPTION(
 FILE_NAME(
 /* name */ 
 'D:/Dropbox/Faradaymotion/Design/R2/R/Step/Faraday R2 wheel rim.stp',
-/* time_stamp */ '2015-08-30T23:29:16+02:00',
+/* time_stamp */ '2015-09-26T13:45:41+02:00',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v15.2',
@@ -11680,7 +11680,7 @@ SI_UNIT($,.RADIAN.)
 #11072=PRODUCT_DEFINITION_SHAPE('',$,#11075);
 #11073=SHAPE_REPRESENTATION('',(#5891),#11067);
 #11074=PRODUCT_DEFINITION_CONTEXT('3D Mechanical Parts',#11078,'design');
-#11075=PRODUCT_DEFINITION('Faraday E2 wheel rim','Faraday E2 wheel rim',
+#11075=PRODUCT_DEFINITION('Faraday R2 wheel rim','Faraday R2 wheel rim',
 #11076,#11074);
 #11076=PRODUCT_DEFINITION_FORMATION('',$,#11080);
 #11077=APPLICATION_PROTOCOL_DEFINITION('international standard',
@@ -11688,7 +11688,7 @@ SI_UNIT($,.RADIAN.)
 #11078=APPLICATION_CONTEXT(
 'Core Data for Automotive Mechanical Design Process');
 #11079=PRODUCT_CONTEXT('3D Mechanical Parts',#11078,'mechanical');
-#11080=PRODUCT('Faraday E2 wheel rim','Faraday E2 wheel rim',$,(#11079));
+#11080=PRODUCT('Faraday R2 wheel rim','Faraday R2 wheel rim',$,(#11079));
 #11081=PRESENTATION_STYLE_ASSIGNMENT((#11082));
 #11082=SURFACE_STYLE_USAGE(.BOTH.,#11083);
 #11083=SURFACE_SIDE_STYLE($,(#11084));
