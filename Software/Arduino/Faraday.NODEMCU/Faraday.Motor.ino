@@ -29,6 +29,7 @@ bool isControllerEnabled()
 
 void adjustPower(byte target)
 {
+  controlTarget = target;
 #if defined(ENABLEDEVMODE)
   Serial.print("adjustPowerTarget:");
   Serial.println(target);
@@ -42,7 +43,6 @@ void adjustPower(byte target)
   target = targetAlpha;
 #endif
 
-  controlTarget = target;
 #if defined(ENABLEDEVMODE)
   Serial.print("target:");
   Serial.println(target);
@@ -59,23 +59,7 @@ void adjustPower(byte target)
   }
   else
   {
-#if defined(ENABLEACCLIMIT)
-    //When accelerating do filtering
-    if (controlPower >= defaultInputMinAcceleration)
-    {
-      if (target > controlPower) {
-        //Push more power.
-        if (controlPower + defaultMaxStepUP <= target)
-          controlPower += defaultMaxStepUP;
-        else
-          controlPower = target;
-      }
-      else
-        controlPower = target;
-    }
-    else
-#endif
-      controlPower = target;
+    controlPower = target;
 
     controlPower = constrain(controlPower, defaultInputMaxBrake, defaultInputMaxAcceleration);
 #if defined(ENABLEDEVMODE)
@@ -155,8 +139,8 @@ void convertPower()
 
 #if defined(ENABLEVESC)
     float motorCurrent = map(controlPower, defaultInputMinBrake, defaultInputMaxBrake, defaultCurrentNeutral, defaultCurrentBrakeMax);
-    //Do not make the current non linear for braking
-    float adjustedCurrent = constrain(motorCurrent, defaultCurrentNeutral, defaultCurrentBrakeMax);
+    float adjustedCurrent = ((motorCurrent * motorCurrent) / defaultCurrentBrakeMax) + defaultCurrentNeutral;
+    adjustedCurrent = constrain(adjustedCurrent, defaultCurrentNeutral, defaultCurrentBrakeMax);
     vesc.set_current_brake(adjustedCurrent);
 #if defined(ENABLEDEVMODE)
     Serial.print("BrakeCur: ");

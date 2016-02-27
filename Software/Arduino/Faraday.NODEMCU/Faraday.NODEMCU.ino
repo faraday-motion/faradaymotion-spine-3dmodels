@@ -9,7 +9,6 @@
 //#define ENABLEOTAUPDATE //Not working
 #define ENABLEWEBUPDATE //Enable web updates through http://10.10.254.100/update
 #define ENABLESMOOTHING //Enable smothing of input values
-#define ENABLEACCLIMIT //Enabble acceleration limitation/smoothing
 
 //How many clients should be able to connect to this ESP8266
 #define MAX_SRV_CLIENTS 1
@@ -56,11 +55,11 @@ WiFiServer server(port);
 WiFiClient serverClients[MAX_SRV_CLIENTS];
 
 //Metro timers
-Metro metroControllerRead = Metro(25);
+Metro metroControllerRead = Metro(50);
 Metro metro250ms = Metro(250);
 Metro metroLeds = Metro(200);
 Metro metroLedsReadyState = Metro(50);
-Metro metroControllerCommunication = Metro(500);
+Metro metroControllerCommunication = Metro(1000);
 
 #if defined(ENABLESERVOESC)
 int servoMaxPWM = 2000;
@@ -112,7 +111,7 @@ float defaultSmoothAlpha = 0.5;
 float defaultCurrentNeutral = 0;
 float defaultCurrentMax = 60;
 float defaultCurrentBrakeMax = 60;
-float defaultCurrentMin = 0.5;
+float defaultCurrentMin = 0.25;
 
 //Control
 volatile bool controlDead = false;

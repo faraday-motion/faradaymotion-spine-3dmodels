@@ -59,7 +59,7 @@ void readFromWifiClient()
   //Check clients for data
   for (i = 0; i < MAX_SRV_CLIENTS; i++) {
     if (serverClients[i] && serverClients[i].connected()) {
-      unsigned int timeout = 10;
+      unsigned int timeout = 1;
       unsigned long timestamp = millis();
 
       while (serverClients[i].available() == 0 && ((millis() - timestamp) <= timeout))
