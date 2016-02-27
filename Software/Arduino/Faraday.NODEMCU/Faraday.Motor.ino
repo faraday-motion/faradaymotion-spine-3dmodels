@@ -38,7 +38,7 @@ void adjustPower(byte target)
   //Smooth the input
   float targetAlpha = (defaultSmoothAlpha * target) + ((1 - defaultSmoothAlpha) * controlPower);
   //If the value is close to target, set it to target
-  if (abs(target - targetAlpha) <= 1)
+  if (abs(float(target) - float(targetAlpha)) <= 1)
     targetAlpha = target;
   target = targetAlpha;
 #endif
