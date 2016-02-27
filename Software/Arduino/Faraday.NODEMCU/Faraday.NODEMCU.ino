@@ -1,5 +1,6 @@
 //Optional defines
 //#define ENABLEDEVMODE //Output debugging information
+#define ENABLEWEBUPDATE //Enable web updates through http://10.10.254.100/update
 #define ENABLEVESC //Control the vesc through serial
 //#define ENABLESERVOESC // Enable servo output for traditional motorcontrollers
 #define ENABLEWIFI //Enable wifi AP
@@ -7,8 +8,8 @@
 //#define ENABLELED //Enable led control
 //#define ENABLEDEADSWITCH //Enable dead man switch 
 //#define ENABLEOTAUPDATE //Not working
-#define ENABLEWEBUPDATE //Enable web updates through http://10.10.254.100/update
 #define ENABLESMOOTHING //Enable smothing of input values
+#define ENABLENONLINEARBRAKE // Non linear braking, softer braking in the beginning
 
 //How many clients should be able to connect to this ESP8266
 #define MAX_SRV_CLIENTS 1
@@ -109,9 +110,10 @@ float defaultSmoothAlpha = 0.5;
 
 //Current control
 float defaultCurrentNeutral = 0;
-float defaultCurrentMax = 60;
+float defaultCurrentAccelerationMax = 60;
+float defaultCurrentAccelerationMin = 0.25;
 float defaultCurrentBrakeMax = 60;
-float defaultCurrentMin = 0.25;
+float defaultCurrentBrakeMin = 0;
 
 //Control
 volatile bool controlDead = false;

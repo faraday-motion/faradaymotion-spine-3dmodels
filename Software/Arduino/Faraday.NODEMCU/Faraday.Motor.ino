@@ -105,10 +105,10 @@ void convertPower()
     motorPercent = map(controlPower, defaultInputMinBrake, defaultInputMaxAcceleration, 0, 100);
 
 #if defined(ENABLEVESC)
-    float motorCurrent = map(controlPower, defaultInputMinAcceleration, defaultInputMaxAcceleration, defaultCurrentNeutral, defaultCurrentMax);
+    float motorCurrent = map(controlPower, defaultInputMinAcceleration, defaultInputMaxAcceleration, defaultCurrentNeutral, defaultCurrentAccelerationMax);
     //Hack function for making things more smooth
-    float adjustedCurrent = ((motorCurrent * motorCurrent) / defaultCurrentMax) + defaultCurrentMin;
-    adjustedCurrent = constrain(adjustedCurrent, defaultCurrentMin, defaultCurrentMax);
+    float adjustedCurrent = ((motorCurrent * motorCurrent) / defaultCurrentAccelerationMax) + defaultCurrentAccelerationMin;
+    adjustedCurrent = constrain(adjustedCurrent, defaultCurrentAccelerationMin, defaultCurrentAccelerationMax);
     vesc.set_current(adjustedCurrent);
 #if defined(ENABLEDEVMODE)
     Serial.print("AccelerationCur: ");
@@ -138,9 +138,12 @@ void convertPower()
     motorPercent  = map(controlPower, defaultInputMinBrake, defaultInputMaxBrake, 0, 100);
 
 #if defined(ENABLEVESC)
-    float motorCurrent = map(controlPower, defaultInputMinBrake, defaultInputMaxBrake, defaultCurrentNeutral, defaultCurrentBrakeMax);
-    float adjustedCurrent = ((motorCurrent * motorCurrent) / defaultCurrentBrakeMax) + defaultCurrentNeutral;
-    adjustedCurrent = constrain(adjustedCurrent, defaultCurrentNeutral, defaultCurrentBrakeMax);
+    float motorCurrent = map(controlPower, defaultInputMinBrake, defaultInputMaxBrake, defaultCurrentBrakeMin, defaultCurrentBrakeMax);
+    float adjustedCurrent = motorCurrent;
+#if defined(ENABLENONLINEARBRAKE)    
+    adjustedCurrent = ((motorCurrent * motorCurrent) / defaultCurrentBrakeMax) + defaultCurrentBrakeMin;
+    adjustedCurrent = constrain(adjustedCurrent, defaultCurrentBrakeMin, defaultCurrentBrakeMax);
+#endif    
     vesc.set_current_brake(adjustedCurrent);
 #if defined(ENABLEDEVMODE)
     Serial.print("BrakeCur: ");
