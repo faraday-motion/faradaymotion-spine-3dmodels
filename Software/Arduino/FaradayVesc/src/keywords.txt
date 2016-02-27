@@ -1,5 +1,0 @@
-FaradayVESC	KEYWORD1
-init	KEYWORD2
-update	KEYWORD2
-set_current	KEYWORD2
-set_current_brake	KEYWORD2
