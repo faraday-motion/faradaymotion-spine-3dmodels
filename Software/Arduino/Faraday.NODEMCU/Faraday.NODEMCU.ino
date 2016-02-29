@@ -1,15 +1,16 @@
 //Optional defines
 //#define ENABLEDEVMODE //Output debugging information
-#define ENABLEWEBUPDATE //Enable web updates through http://10.10.254.100/update
+#define ENABLEWEBUPDATE //Enable web updates through http://10.10.100.254/update
 #define ENABLEVESC //Control the vesc through serial
 //#define ENABLESERVOESC // Enable servo output for traditional motorcontrollers
 #define ENABLEWIFI //Enable wifi AP
-#define ENABLENUNCHUK //Enable control through a nunchuk
+//#define ENABLENUNCHUK //Enable control through a nunchuk
 //#define ENABLELED //Enable led control
 //#define ENABLEDEADSWITCH //Enable dead man switch 
 //#define ENABLEOTAUPDATE //Not working
 #define ENABLESMOOTHING //Enable smothing of input values
 #define ENABLENONLINEARBRAKE // Non linear braking, softer braking in the beginning
+//#define ENABLEDISCBRAKE //Disc brakes
 
 //How many clients should be able to connect to this ESP8266
 #define MAX_SRV_CLIENTS 1
@@ -18,6 +19,8 @@
 #define PINEXTERNALRESET 16
 #define PINDEADSWITCH 12
 #define PINSERVOESC 0
+#define PINSERVOBRAKE1 2
+#define PINSERVOBRAKE2 14
 
 //Required includes
 #include <Arduino.h>
@@ -161,7 +164,7 @@ void setupSERVO()
 {
   pinMode(PINSERVOESC, OUTPUT);
   servoESC.writeMicroseconds(servoNeutralPWM);
-  servoESC.attach(PINSERVOESC);
+  servoESC.attach(PINSERVOESC, servoMinPWM, servoMaxPWM);
   servoESC.writeMicroseconds(servoNeutralPWM);
 }
 #endif
@@ -201,6 +204,10 @@ void setup()
   setupSERVO();
 #endif
 
+#if defined(ENABLEDISCBRAKE)
+  setupDiscBrake();
+#endif
+
 #if defined(ENABLENUNCHUK)
   nunchuk.init();
 #endif
@@ -238,7 +245,7 @@ void loop()
 #endif
 
   yield();
-  if (metroControllerRead.check() == 1) {
+  if (metroControllerRead.check() == 1) {    
 #if defined(ENABLEWIFI)
     if (controlType == 0 || controlType == 1)
       readFromWifiClient();

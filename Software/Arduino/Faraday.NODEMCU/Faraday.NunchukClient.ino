@@ -11,7 +11,7 @@ int maxNunchukChecksumCount = 100;
 byte defaultNunchukMinBrake = 117;
 byte defaultNunchukMaxBrake = 10;
 byte defaultNunchukMinAcceleration = 137;
-byte defaultNunchukMaxAcceleration = 245;
+byte defaultNunchukMaxAcceleration = 235;
 byte defaultNunchukNeutral = 127;
 
 void readFromNunchukClient()

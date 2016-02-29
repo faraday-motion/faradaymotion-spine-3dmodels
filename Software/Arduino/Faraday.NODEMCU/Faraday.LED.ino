@@ -39,20 +39,20 @@ void setLedControls()
   {
     int pixelCountTarget = map(motorTargetPercent, 0, 100, 0, LEDSCONTROLCOUNT);
     int pixelCountActual = map(motorPercent, 0, 100, 0, LEDSCONTROLCOUNT);
-    for (int i = LEDSCONTROLINDEX; i < LEDSCONTROLINDEX+ LEDSCONTROLCOUNT; i++) {
+    for (int i = LEDSCONTROLINDEX; i < LEDSCONTROLINDEX + LEDSCONTROLCOUNT; i++) {
       setPixelColor(i, 0, 0, 0);
       yield();
     }
 
     //Set the led 0 for all states
     if (motorDirection == 0) {
-      setPixelColor(0, 150, 150, 0);
+      setPixelColor(LEDSCONTROLINDEX, 150, 150, 0);
     }
     else if (motorDirection == 1) {
-      setPixelColor(0, 0, 200, 0);
+      setPixelColor(LEDSCONTROLINDEX, 0, 200, 0);
     }
     else if (motorDirection == 2) {
-      setPixelColor(0, 200, 0, 0);
+      setPixelColor(LEDSCONTROLINDEX, 200, 0, 0);
     }
 
     //Going forward
