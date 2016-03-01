@@ -1,10 +1,18 @@
+//Requires 
+//http://arduino.esp8266.com/staging/package_esp8266com_index.json
+//VERSION: 2.1.0-rc2
+//ArduinoNunchuk
+//Metro
+//WS2812
+//Faraday.Vesc
+
 //Optional defines
 //#define ENABLEDEVMODE //Output debugging information
 #define ENABLEWEBUPDATE //Enable web updates through http://10.10.100.254/update
 #define ENABLEVESC //Control the vesc through serial
 //#define ENABLESERVOESC // Enable servo output for traditional motorcontrollers
 #define ENABLEWIFI //Enable wifi AP
-//#define ENABLENUNCHUK //Enable control through a nunchuk
+#define ENABLENUNCHUK //Enable control through a nunchuk
 //#define ENABLELED //Enable led control
 //#define ENABLEDEADSWITCH //Enable dead man switch 
 //#define ENABLEOTAUPDATE //Not working
