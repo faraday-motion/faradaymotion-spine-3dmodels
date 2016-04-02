@@ -1,4 +1,0 @@
-WS2812			KEYWORD1
-Pixel_t			KEYWORD1
-init			KEYWORD2
-show			KEYWORD2
